@@ -1,0 +1,24 @@
+import java.util.Arrays;
+public class Main {
+    public static void main(String[] args) {
+        int[] arr = {0, 1, 0, 3, 12};
+
+        int num = 0;
+
+        // Move non-zero elements to the front
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] != 0) {
+                arr[num] = arr[i];
+                num++;
+            }
+        }
+
+        // Fill the remaining positions with zeros
+        while (num < arr.length) {
+            arr[num] = 0;
+            num++;
+        }
+
+        System.out.println("Arranged Order: " + Arrays.toString(arr));
+    }
+}
